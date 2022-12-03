@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "estedad";
+    src: url("./Fonts/woff2/Estedad-Thin.woff2") format("woff2"), url("./Fonts/ttf/Estedad-Thin.ttf") format("ttf");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "estedad";
+    src: url("./Fonts/woff2/Estedad-ExtraLight.woff2") format("woff2"), url("./Fonts/ttf/Estedad-ExtraLight.ttf") format("ttf");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+@font-face {
+    font-family: "estedad";
+    src: url("./Fonts/woff2/Estedad-Light.woff2") format("woff2"), url("./Fonts/ttf/Estedad-Light.ttf") format("ttf");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+@font-face {
+  font-family: "estedad";
+  src: url("./Fonts/woff2/Estedad-Regular.woff2") format("woff2"), url("./Fonts/ttf/Estedad-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "estedad";
+    src: url("./Fonts/woff2/Estedad-Medium.woff2") format("woff2"), url("./Fonts/ttf/Estedad-Medium.ttf") format("ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "estedad";
+    src: url("./Fonts/woff2/Estedad-SemiBold.woff2") format("woff2"), url("./Fonts/ttf/Estedad-SemiBold.ttf") format("ttf");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "estedad";
+    src: url("./Fonts/woff2/Estedad-Bold.woff2") format("woff2"), url("./Fonts/ttf/Estedad-Bold.ttf") format("ttf");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+@font-face {
+    font-family: "estedad";
+    src: url("./Fonts/woff2/Estedad-ExtraBold.woff2") format("woff2"), url("./Fonts/ttf/Estedad-ExtraBold.ttf") format("ttf");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+
+@font-face {
+    font-family: "estedad";
+    src: url("./Fonts/woff2/Estedad-Black.woff2") format("woff2"), url("./Fonts/ttf/Estedad-Black.ttf") format("ttf");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  
+ 
