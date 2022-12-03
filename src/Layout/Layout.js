@@ -17,8 +17,8 @@ const Layout = ({ children }) => {
     <div className="h-screen w-screen flex flex-col gap-4 items-center fixed top-0 left-0 ">
       <div className="container p-2 w-full  h-[calc(100%-60px)] md:h-full">
         <ToastContainer
-          toastClassName={({ type }) => contextClass[type || "default"] + " relative flex flex-nowrap p-2 w-fit rounded-md w-auto justify-between overflow-hidden cursor-pointer"}
-          bodyClassName={() => "text-sm flex flex-nowrap justify-between items-center font-white font-sans block p-2"}
+          toastClassName={({ type }) => contextClass[type || "default"] + " relative flex flex-nowrap p-2 md:w-[2000px] w-[200px]  rounded-md w-auto justify-between overflow-hidden cursor-pointer"}
+          bodyClassName={() => "text-[6px] md:text-sm font-light flex flex-nowrap justify-between items-center font-white font-sans block p-2"}
           position="top-left"
           autoClose={3000}
         />

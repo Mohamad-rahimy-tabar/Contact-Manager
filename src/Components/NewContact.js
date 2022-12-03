@@ -46,7 +46,7 @@ const NewContact = () => {
             onChange={changeHandler}
             onFocus={focusHandler}
             onBlur={blurHandler}
-            className="border-none flex-1 w-1/2 bg-transparent focus:outline-none focus:ring-0 placeholder:text-xs md:placeholder:text-sm lg:placeholder:text-base"
+            className="border-none text-sm md:text-base flex-1 w-1/2 bg-transparent focus:outline-none focus:ring-0 placeholder:text-xs md:placeholder:text-sm lg:placeholder:text-base"
             placeholder="نام و نام خانوادگی"
           ></input>
           <div className={`${newContact.name.trim().length > 2 ? "text-green-500" : "text-red-500"}`}>
@@ -71,7 +71,7 @@ const NewContact = () => {
             onBlur={blurHandler}
             value={newContact.phone}
             onChange={changeHandler}
-            className="border-none flex-1 w-1/2 bg-transparent focus:outline-none focus:ring-0 placeholder:text-xs md:placeholder:text-sm lg:placeholder:text-base"
+            className="border-none flex-1 w-1/2 text-sm md:text-base bg-transparent focus:outline-none focus:ring-0 placeholder:text-xs md:placeholder:text-sm lg:placeholder:text-base"
             placeholder="تلفن همراه"
           ></input>
           <div className={`${newContact.phone.trim().length === 11 ? "text-green-500" : "text-red-500"}`}>

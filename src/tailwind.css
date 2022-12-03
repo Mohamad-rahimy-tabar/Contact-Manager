@@ -690,9 +690,8 @@ input[type="number"]::-webkit-inner-spin-button,
 .w-screen{
   width: 100vw;
 }
-.w-fit{
-  width: -moz-fit-content;
-  width: fit-content;
+.w-\[200px\]{
+  width: 200px;
 }
 .w-auto{
   width: auto;
@@ -858,6 +857,9 @@ input[type="number"]::-webkit-inner-spin-button,
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.text-\[6px\]{
+  font-size: 6px;
+}
 .font-thin{
   font-weight: 100;
 }
@@ -1007,6 +1009,9 @@ input[type="number"]::-webkit-inner-spin-button,
   .md\:w-6{
     width: 1.5rem;
   }
+  .md\:w-\[2000px\]{
+    width: 2000px;
+  }
   .md\:max-w-screen-lg{
     max-width: 1024px;
   }
@@ -1042,6 +1047,10 @@ input[type="number"]::-webkit-inner-spin-button,
   .md\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+  .md\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
   .md\:font-bold{
     font-weight: 700;
