@@ -690,8 +690,8 @@ input[type="number"]::-webkit-inner-spin-button,
 .w-screen{
   width: 100vw;
 }
-.w-\[200px\]{
-  width: 200px;
+.w-\[210px\]{
+  width: 210px;
 }
 .w-auto{
   width: auto;
@@ -857,8 +857,8 @@ input[type="number"]::-webkit-inner-spin-button,
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-.text-\[6px\]{
-  font-size: 6px;
+.text-\[8px\]{
+  font-size: 8px;
 }
 .font-thin{
   font-weight: 100;
@@ -929,10 +929,6 @@ input[type="number"]::-webkit-inner-spin-button,
 .placeholder\:text-xs::placeholder{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.hover\:text-main-primary:hover{
-  --tw-text-opacity: 1;
-  color: rgb(253 224 71 / var(--tw-text-opacity));
 }
 .focus\:outline-none:focus{
   outline: 2px solid transparent;

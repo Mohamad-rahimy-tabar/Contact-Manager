@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <footer  className="fixed bottom-0 max-w-screen-xs w-full  mx-auto md:hidden p-1 bg-main-secondary shadow-md rounded-md flex items-center justify-evenly">
-      <NavLink to="home" className={({ isActive }) => `${isActive && " text-main-primary"} p-2 cursor-pointer transition-all duration-300 bg-main-tertiary rounded-md shadow-md hover:text-main-primary drop-shadow-md`}>
+      <NavLink to="home" className={({ isActive }) => `${isActive && "  drop-shadow-md shadow-md text-main-primary"} p-2 cursor-pointer text-main-tertiary `}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
           <path
             strokeLinecap="round"
@@ -12,7 +12,7 @@ const Footer = () => {
           />
         </svg>
       </NavLink>
-      <NavLink to="contactlist" className={({ isActive }) => `${isActive && " text-main-primary"} p-2 cursor-pointer transition-all duration-300 bg-main-tertiary rounded-md shadow-md hover:text-main-primary drop-shadow-md`}>
+      <NavLink to="contactlist" className={({ isActive }) => `${isActive && "  drop-shadow-md shadow-md text-main-primary"} p-2 cursor-pointer text-main-tertiary `}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
           <path
             strokeLinecap="round"
@@ -21,7 +21,7 @@ const Footer = () => {
           />
         </svg>
       </NavLink>
-      <NavLink to="addnew" className={({ isActive }) => `${isActive && " text-main-primary"} p-2 cursor-pointer transition-all duration-300 bg-main-tertiary rounded-md shadow-md hover:text-main-primary drop-shadow-md`}>
+      <NavLink to="addnew" className={({ isActive }) => `${isActive && "  drop-shadow-md shadow-md text-main-primary"} p-2 cursor-pointer text-main-tertiary  `}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
           <path
             strokeLinecap="round"
@@ -30,7 +30,7 @@ const Footer = () => {
           />
         </svg>
       </NavLink>
-      <NavLink to="bookmark" className={({ isActive }) => `${isActive && " text-main-primary"} p-2 cursor-pointer transition-all duration-300 bg-main-tertiary rounded-md shadow-md hover:text-main-primary drop-shadow-md`}>
+      <NavLink to="bookmark" className={({ isActive }) => `${isActive && "  drop-shadow-md shadow-md text-main-primary"} p-2 cursor-pointer text-main-tertiary `}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
         </svg>
