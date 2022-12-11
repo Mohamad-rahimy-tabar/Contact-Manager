@@ -1,5 +1,4 @@
 import NewContact from "./Components/NewContact";
-import { v4 as uuidv4 } from "uuid";
 import Layout from "./Layout/Layout";
 import ContactList from "./Components/ContactList";
 import FavoriteList from "./Components/FavoriteList";
@@ -8,12 +7,13 @@ import React, { useContext, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import EditContact from "./Components/EditContact";
 const ContactContext = React.createContext();
 const ContactContextDispacher = React.createContext();
 
 function App() {
   const [contacts, setContacts] = useState(JSON.parse(localStorage.getItem("contacts")) || []);
-  
+
   useEffect(() => {
     localStorage.setItem("contacts", JSON.stringify(contacts));
   }, [contacts]);
@@ -23,9 +23,11 @@ function App() {
       <ContactContext.Provider value={contacts}>
         <ContactContextDispacher.Provider value={setContacts}>
           <Routes>
-            <Route path="*" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
             <Route path="home" element={<Home />} />
             <Route path="addnew" element={<NewContact />} />
+            <Route path="edit" element={<EditContact />} />
+            <Route path="edit/:id" element={<EditContact />} />
             <Route path="contactlist" element={<ContactList />} />
             <Route path="bookmark" element={<FavoriteList />} />
           </Routes>
@@ -47,7 +49,7 @@ export const useContactActions = () => {
   const contacts = useContext(ContactContext);
 
   const addNewContact = (newContact) => {
-    const id = uuidv4();
+    const id = new Date().getTime();
     const contact = { ...newContact, id };
     setContacts([...contacts, contact]);
     navigate("/contactlist");
@@ -71,24 +73,20 @@ export const useContactActions = () => {
     selectedContact.mark ? toast.info("مخاطب به لیست موردعلاقه ها اضافه شد") : toast.info("مخاطب از لیست موردعلاقه ها حذف شد");
   };
 
-  const showEditBox = (id) => {
-    const index = contacts.findIndex((c) => c.id === id);
-    const selectedContact = { ...contacts[index] };
-    selectedContact.edit = !selectedContact.edit;
-    const allContacts = [...contacts];
-    allContacts[index] = selectedContact;
-    setContacts(allContacts);
+  const showEditPage = (id) => {
+    navigate(`/edit/${id}`);
   };
 
-  const editHandler = (id, editedUser) => {
-    const index = contacts.findIndex((c) => c.id === id);
+  const editHandler = (editedUser) => {
+    const index = contacts.findIndex((c) => c.id === editedUser.id);
     const selectedContact = { ...contacts[index] };
     selectedContact.name = editedUser.name;
     selectedContact.phone = editedUser.phone;
-    selectedContact.edit = false;
     const allContacts = [...contacts];
     allContacts[index] = selectedContact;
     setContacts(allContacts);
+    navigate("/contactlist");
+    toast.success("مخاطب ویرایش شد");
   };
-  return { addNewContact, removeHandler, markHandler, showEditBox, editHandler };
+  return { addNewContact, removeHandler, markHandler, showEditPage, editHandler };
 };

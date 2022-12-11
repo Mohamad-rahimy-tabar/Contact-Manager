@@ -2,16 +2,11 @@ import { useState } from "react";
 import RemoveModal from "./RemoveModal";
 import { useContactActions } from "../App";
 const Contact = ({ contact }) => {
-  const [editedUser, seteditedUser] = useState({});
   const [showRemoveModal, setshowRemoveModal] = useState(false);
-  const { showEditBox, editHandler, markHandler } = useContactActions();
-
-  const changeHandler = (e) => {
-    seteditedUser({ ...editedUser, [e.target.name]: e.target.value });
-  };
+  const { showEditPage, markHandler } = useContactActions();
 
   return (
-    <div  className="flex flex-col items-center w-full gap-2 ">
+    <div className="flex flex-col items-center w-full gap-2 ">
       <RemoveModal contact={contact} showRemoveModal={showRemoveModal} setshowRemoveModal={setshowRemoveModal} />
       <div className="border-2 cursor-pointer  p-2 lg:p-4 bg-main-tertiary shadow-md border-main-primary rounded-md flex items-center justify-between w-full">
         <div>
@@ -39,7 +34,7 @@ const Contact = ({ contact }) => {
               />
             </svg>
           </div>
-          <div className="text-green-400 cursor-pointer" id={contact.id} onClick={() => showEditBox(contact.id)}>
+          <div className="text-green-400 cursor-pointer" id={contact.id} onClick={() => showEditPage(contact.id)}>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 lg:h-7 lg:w-7">
               <path
                 strokeLinecap="round"
@@ -53,23 +48,6 @@ const Contact = ({ contact }) => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
             </svg>
           </div>
-        </div>
-      </div>
-      <div className={`${contact.edit ? "flex" : "hidden"} w-full  items-center gap-4 p-2`}>
-        <div>
-          <input type="text" name="name" onChange={changeHandler} className="border-none shadow-md bg-transparent  focus:ring-main-primary rounded-md " placeholder={contact.name}></input>
-        </div>
-        <div>
-          <input type="number" name="phone" onChange={changeHandler} className="border-none shadow-md bg-transparent  focus:ring-main-primary rounded-md " placeholder={contact.phone}></input>
-        </div>
-        <div className="cursor-pointer text-green-400 flex-1" title="ذخیره" onClick={() => editHandler(contact.id, editedUser)}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 lg:h-7 lg:w-7">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
-            />
-          </svg>
         </div>
       </div>
     </div>
